@@ -1,0 +1,414 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="CV - Emma King">
+    <Header />
+    <main class="max-w-4xl mx-auto px-8 pt-16 pb-32">
+        <h1 class="text-4xl font-normal mb-4">Emma King</h1>
+        <p class="text-lg text-neutral-500 dark:text-neutral-400 mb-12">
+            DevOps Engineer
+        </p>
+
+        <section class="mb-12">
+            <h2 class="text-2xl mb-6">Summary</h2>
+            <p class="text-base leading-relaxed">
+                DevOps and software engineer who has worked across multiple
+                industries and dozens of client projects. My focus is cloud
+                infrastructure, automation, and CI/CD, and over the years I've
+                designed pipelines, built cloud architecture, tightened
+                security, and kept business-critical applications running
+                smoothly. I'm motivated by complex technical challenges and care
+                deeply about reliability and efficiency. My varied background
+                across academia and industry means I naturally connect the dots
+                between technical decisions and business needs.
+            </p>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl mb-6">Employment</h2>
+            <div class="space-y-4">
+                <div
+                    class="border-l-2 border-neutral-200 dark:border-neutral-700 pl-6"
+                >
+                    <h3 class="text-lg font-medium">Netlight</h3>
+                    <p class="text-xs text-neutral-400 dark:text-neutral-500">
+                        Consulting
+                    </p>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+                        2025 –
+                    </p>
+                </div>
+                <div
+                    class="border-l-2 border-neutral-200 dark:border-neutral-700 pl-6"
+                >
+                    <h3 class="text-lg font-medium">Orangit</h3>
+                    <p class="text-xs text-neutral-400 dark:text-neutral-500">
+                        Maintenance
+                    </p>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+                        2024 – 2025
+                    </p>
+                </div>
+                <div
+                    class="border-l-2 border-neutral-200 dark:border-neutral-700 pl-6"
+                >
+                    <h3 class="text-lg font-medium">Accenture</h3>
+                    <p class="text-xs text-neutral-400 dark:text-neutral-500">
+                        Consulting
+                    </p>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+                        2022 – 2024
+                    </p>
+                </div>
+                <div
+                    class="border-l-2 border-neutral-200 dark:border-neutral-700 pl-6"
+                >
+                    <h3 class="text-lg font-medium">Parental leave</h3>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+                        2018-2022
+                    </p>
+                </div>
+                <div
+                    class="border-l-2 border-neutral-200 dark:border-neutral-700 pl-6"
+                >
+                    <h3 class="text-lg font-medium">University of Helsinki</h3>
+                    <p class="text-xs text-neutral-400 dark:text-neutral-500">
+                        Chemistry Lab Gadolin
+                    </p>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+                        2018
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl mb-6">Skills</h2>
+            <div class="flex flex-wrap gap-2">
+                {
+                    [
+                        "AWS",
+                        "CI/CD",
+                        "GitHub Actions",
+                        "Docker",
+                        "Bash",
+                        "Linux",
+                        "Kubernetes",
+                        "GCP",
+                        "Azure",
+                        "Azure DevOps",
+                        "Microservices",
+                        "Python",
+                        "Node.js",
+                        "Scrum",
+                        "Agile",
+                    ].map((skill) => (
+                        <span class="px-3 py-1 text-xs border border-neutral-200 dark:border-neutral-700">
+                            {skill}
+                        </span>
+                    ))
+                }
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl mb-6">Experience</h2>
+
+            <div class="space-y-10">
+                <article
+                    class="border-l-2 border-neutral-200 dark:border-neutral-700 pl-6"
+                >
+                    <div
+                        class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2"
+                    >
+                        <h3 class="text-lg font-medium">Cloud Engineer</h3>
+                        <span
+                            class="text-sm text-neutral-500 dark:text-neutral-400"
+                            >2025</span
+                        >
+                    </div>
+                    <p
+                        class="text-sm text-neutral-500 dark:text-neutral-400 mb-3"
+                    >
+                        Consulting
+                    </p>
+                    <p class="text-base leading-relaxed mb-3">
+                        Built a custom data aggregation script to collect and
+                        consolidate employee feedback across the entire
+                        organization, delivering actionable insights to
+                        stakeholders over multiple years. Conducted a
+                        comprehensive audit of the company's AWS cloud
+                        environment powering an internal employee feedback
+                        platform, identifying major architectural improvements
+                        that enhanced performance, reduced costs, and improved
+                        system reliability.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        {
+                            [
+                                "AWS",
+                                "SQL",
+                                "Python",
+                                "Data Aggregation",
+                                "Cloud Audit",
+                                "Bash",
+                            ].map((skill) => (
+                                <span class="px-2 py-0.5 text-xs bg-neutral-100 dark:bg-neutral-800 dark:text-neutral-100">
+                                    {skill}
+                                </span>
+                            ))
+                        }
+                    </div>
+                </article>
+
+                <article
+                    class="border-l-2 border-neutral-200 dark:border-neutral-700 pl-6"
+                >
+                    <div
+                        class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2"
+                    >
+                        <h3 class="text-lg font-medium">DevOps Engineer</h3>
+                        <span
+                            class="text-sm text-neutral-500 dark:text-neutral-400"
+                            >Q1 2024 – Q2 2025</span
+                        >
+                    </div>
+                    <p
+                        class="text-sm text-neutral-500 dark:text-neutral-400 mb-3"
+                    >
+                        Telecommunications Company
+                    </p>
+                    <p class="text-base leading-relaxed mb-3">
+                        Played a key role in the DevOps team, designing a CI/CD
+                        workflow for an on-premises microservice architecture
+                        and improving system reliability. Actively troubleshot
+                        server issues, minimized production downtime, and
+                        created a custom solution to streamline error log
+                        analysis across multiple containers. Initiated and
+                        designed test automation for a major application,
+                        ensuring critical features could be tested without
+                        disrupting key integrations. Helped orchestrate smooth
+                        infrastructure upgrades with minimal downtime and
+                        performed critical server security maintenance updates
+                        monthly.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        {
+                            [
+                                "Docker",
+                                "Linux",
+                                "Ansible",
+                                "NGINX",
+                                "GitHub Actions",
+                                "Jenkins",
+                                "Bash",
+                                "Podman",
+                                "Helm",
+                                "Kubernetes",
+                                "React",
+                                "NodeJS",
+                                "REST API",
+                                "Elastic APM",
+                            ].map((skill) => (
+                                <span class="px-2 py-0.5 text-xs bg-neutral-100 dark:bg-neutral-800 dark:text-neutral-100">
+                                    {skill}
+                                </span>
+                            ))
+                        }
+                    </div>
+                </article>
+
+                <article
+                    class="border-l-2 border-neutral-200 dark:border-neutral-700 pl-6"
+                >
+                    <div
+                        class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2"
+                    >
+                        <h3 class="text-lg font-medium">Cloud Engineer</h3>
+                        <span
+                            class="text-sm text-neutral-500 dark:text-neutral-400"
+                            >Q2 2024 – Q3 2024</span
+                        >
+                    </div>
+                    <p
+                        class="text-sm text-neutral-500 dark:text-neutral-400 mb-3"
+                    >
+                        Financial Services Company
+                    </p>
+                    <p class="text-base leading-relaxed mb-3">
+                        Independently conducted a thorough review of a
+                        third-party compliance manual and performed a full
+                        inspection of the client's Google Cloud infrastructure.
+                        Wrote a comprehensive report on the entire
+                        infrastructure and its security aspects. Implemented
+                        necessary changes including rotating API keys with
+                        shorter lifespans, strengthening monitoring, and
+                        tightening network and security configurations. Enabled
+                        the client to proceed with a third-party audit with
+                        confidence.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        {
+                            [
+                                "Google Cloud",
+                                "IAM",
+                                "VPC",
+                                "Cloud Audit logs",
+                                "Secrets Manager",
+                                "KMS",
+                                "Cloud Armor",
+                                "Firebase",
+                                "CIS Benchmark",
+                            ].map((skill) => (
+                                <span class="px-2 py-0.5 text-xs bg-neutral-100 dark:bg-neutral-800 dark:text-neutral-100">
+                                    {skill}
+                                </span>
+                            ))
+                        }
+                    </div>
+                </article>
+
+                <article
+                    class="border-l-2 border-neutral-200 dark:border-neutral-700 pl-6"
+                >
+                    <div
+                        class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2"
+                    >
+                        <h3 class="text-lg font-medium">Software Engineer</h3>
+                        <span
+                            class="text-sm text-neutral-500 dark:text-neutral-400"
+                            >Q1 2024 – Q3 2024</span
+                        >
+                    </div>
+                    <p
+                        class="text-sm text-neutral-500 dark:text-neutral-400 mb-3"
+                    >
+                        Maintenance & SRE
+                    </p>
+                    <p class="text-base leading-relaxed mb-3">
+                        Ensured all client incidents were solved within Service
+                        Level Agreements for multiple small to mid-sized
+                        businesses. Provided proactive maintenance,
+                        troubleshooting, and security updates for applications.
+                        Designed and developed new features to enhance existing
+                        applications. Gained hands-on experience with a wide
+                        range of technologies and identified common bottlenecks
+                        across various clients, implementing effective solutions
+                        to improve performance and reliability.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        {
+                            [
+                                "JavaScript",
+                                "TypeScript",
+                                "React",
+                                "NodeJS",
+                                "CSS",
+                                "Tailwind",
+                                "Redis",
+                                "NGINX",
+                                "AWS",
+                                "GCP",
+                                "Azure",
+                                "Ansible",
+                                "Terraform",
+                                "CloudFormation",
+                            ].map((skill) => (
+                                <span class="px-2 py-0.5 text-xs bg-neutral-100 dark:bg-neutral-800 dark:text-neutral-100">
+                                    {skill}
+                                </span>
+                            ))
+                        }
+                    </div>
+                </article>
+
+                <article
+                    class="border-l-2 border-neutral-200 dark:border-neutral-700 pl-6"
+                >
+                    <div
+                        class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2"
+                    >
+                        <h3 class="text-lg font-medium">Cloud Engineer</h3>
+                        <span
+                            class="text-sm text-neutral-500 dark:text-neutral-400"
+                            >Q2 2022 – Q1 2024</span
+                        >
+                    </div>
+                    <p
+                        class="text-sm text-neutral-500 dark:text-neutral-400 mb-3"
+                    >
+                        Insurance Company
+                    </p>
+                    <p class="text-base leading-relaxed mb-3">
+                        Created proof-of-concept solutions for a new
+                        Infrastructure as Code architecture for the client's
+                        Kubernetes cluster. Designed and implemented a
+                        distributed load testing infrastructure using JMeter and
+                        multiple virtual machines controlled in synchrony,
+                        enabling more efficient performance testing. Maintained
+                        and improved the test automation infrastructure on AWS,
+                        ensuring stability and scalability for continuous
+                        testing needs part of the DevOps team responsible for
+                        designing and implementing CI/CD pipelines in AWS.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        {
+                            [
+                                "AWS CodePipeline",
+                                "EKS",
+                                "kubectl",
+                                "AWS EventBridge",
+                                "CloudFormation",
+                                "JavaScript",
+                                "Python",
+                                "JMeter",
+                                "Robot Framework",
+                            ].map((skill) => (
+                                <span class="px-2 py-0.5 text-xs bg-neutral-100 dark:bg-neutral-800 dark:text-neutral-100">
+                                    {skill}
+                                </span>
+                            ))
+                        }
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl mb-6">Education</h2>
+            <div class="space-y-4">
+                <div
+                    class="border-l-2 border-neutral-200 dark:border-neutral-700 pl-6"
+                >
+                    <h3 class="text-lg font-medium">University of Helsinki</h3>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+                        Chemistry & Computer Science • 2016 - 2020
+                    </p>
+                </div>
+                <div
+                    class="border-l-2 border-neutral-200 dark:border-neutral-700 pl-6"
+                >
+                    <h3 class="text-lg font-medium">University of Helsinki</h3>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+                        Educational Psychology • 2012 - 2015
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl mb-6">Certifications</h2>
+            <div class="space-y-4">
+                <div
+                    class="border-l-2 border-neutral-200 dark:border-neutral-700 pl-6"
+                >
+                    <h3 class="text-lg font-medium">AWS Developer</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    <Footer />
+</Layout>

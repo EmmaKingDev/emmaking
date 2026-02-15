@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { projects } from "../data/projects";
+---
+
+<Layout>
+    <Header />
+
+    <main class="max-w-4xl mx-auto px-8 py-12 pb-32">
+        <!-- Intro Section -->
+        <section class="mb-20">
+            <div class="space-y-6 text-sm leading-relaxed">
+                <p>
+                    Hi! I'm a software engineer with a focus on cloud
+                    infrastructure, containers, Kubernetes, CI/CD, and
+                    AWS/Azure/GCP.
+                </p>
+                <p>
+                    Over the years I've worked at several consultancies across
+                    dozens of client projects, giving me a broad and practical
+                    understanding of how different organizations build and run
+                    their systems.
+                </p>
+                <p>
+                    On top of that, my varied academic background from the
+                    University of Helsinki gives me a cross-disciplinary edge
+                    that helps me think beyond just the technical side.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section>
+            <h2 class="text-2xl mb-12">HOBBY PROJECTS →</h2>
+
+            <div
+                class="projects-grid grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
+            >
+                {
+                    projects.map((project, index) => (
+                        <div
+                            class:list={[
+                                "project-wrapper",
+                                index % 2 === 0
+                                    ? "md:self-end"
+                                    : "md:self-start",
+                            ]}
+                        >
+                            <ProjectCard
+                                title={project.title}
+                                description={project.description}
+                                image={project.image}
+                                githubUrl={project.githubUrl}
+                            />
+                        </div>
+                    ))
+                }
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+</Layout>
+
+<style>
+    /* Staggered layout pattern */
+    @media (min-width: 768px) {
+        .projects-grid {
+            grid-auto-rows: 1fr;
+            align-items: stretch;
+        }
+
+        .project-wrapper:nth-child(odd) {
+            margin-top: 6rem;
+        }
+
+        .project-wrapper:nth-child(even) {
+            margin-top: 0;
+        }
+    }
+</style>

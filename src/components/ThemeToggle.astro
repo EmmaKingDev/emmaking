@@ -1,0 +1,54 @@
+---
+// Theme toggle component with visual indicators
+---
+
+<div class="theme-toggle">
+  <button
+    id="theme-toggle"
+    class="flex items-center gap-2"
+    aria-label="Toggle theme"
+  >
+    <span
+      id="dark-indicator"
+      class="w-10 h-10 rounded-full font-medium transition-all flex items-center justify-center bg-gray-300 text-gray-600 dark:bg-white dark:text-black"
+    >
+      D
+    </span>
+    <span
+      id="light-indicator"
+      class="w-10 h-10 rounded-full font-medium transition-all flex items-center justify-center bg-black text-white dark:bg-black dark:text-white"
+    >
+      L
+    </span>
+  </button>
+</div>
+
+<script>
+  function initThemeToggle() {
+    const button = document.getElementById('theme-toggle');
+    if (!button) return;
+
+    button.addEventListener('click', () => {
+      const html = document.documentElement;
+      const isDark = html.classList.contains('dark');
+
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    });
+  }
+
+  // Initialize on page load
+  initThemeToggle();
+
+  // Re-initialize on navigation (for client-side routing)
+  document.addEventListener('astro:page-load', initThemeToggle);
+</script>
+
+<style>
+  .theme-toggle button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    background: transparent;
+  }
+</style>

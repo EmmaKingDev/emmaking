@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: 255 255 255;
+    --text: 0 0 0;
+    --border: 229 229 229;
+  }
+
+  .dark {
+    --bg: 0 0 0;
+    --text: 255 255 255;
+    --border: 38 38 38;
+  }
+
+  body {
+    background-color: rgb(var(--bg));
+    color: rgb(var(--text));
+    font-family: 'IBM Plex Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+}
