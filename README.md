@@ -1,3 +1,3 @@
 # Portfolio website
 
-CV and hobby projects
+CV and hobby projects, made with Astro
